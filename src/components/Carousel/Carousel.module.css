@@ -1,0 +1,11 @@
+.indicators {
+    bottom: -4%;
+}
+
+.indicator {
+	background: #e2e2e2;
+
+	&[data-active="true"] {
+		background: var(--mantine-color-main-0);
+	}
+}
