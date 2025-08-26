@@ -1,48 +1,59 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .shinyText {
-	font-size: 15px;
-	font-weight: 400 !important;
-	color: #625e5ea4 !important;
+  font-size: 15px;
+  font-weight: 400 !important;
+  color: #625e5ea4 !important;
 }
 
 .skilledGroup {
-	transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
-	.skilledBox {
-		position: absolute;
-		top: -22px;
-		left: 35px;
-		width: 200px;
-		height: 150px;
-		transition: transform 0.35s ease-in-out;
-	}
+  .skilledBox {
+    position: absolute;
+    top: -22px;
+    left: 35px;
+    width: 200px;
+    height: 150px;
+    transition: transform 0.35s ease-in-out;
+  }
 
-	.skilledImage {
-		transition: transform 0.35s ease-in-out;
-		transition-delay: .55s;
-	}
+  .skilledImage {
+    transition: transform 0.35s ease-in-out;
+    transition-delay: 0.55s;
+  }
 
-	.skilledCircle {
-		position: absolute;
-		bottom: -35px;
-		right: 20px;
-		transition: transform 0.35s ease-in-out;
-		transition-delay: .25s;
-	}
+  .skilledCircle {
+    position: absolute;
+    bottom: -35px;
+    right: 20px;
+    transition: transform 0.35s ease-in-out;
+    transition-delay: 0.25s;
+    animation: rotate 10s linear infinite;
+    transform-origin: center; /* Đảm bảo vòng tròn quay từ giữa */
+  }
 
-	&:hover {
-		.skilledBox {
-			transform: scale(1.15);
-			transform-origin: center;
-		}
+  &:hover {
+    .skilledBox {
+      transform: scale(1.15);
+      transform-origin: center;
+    }
 
-		.skilledImage {
-			transform: scale(1.03);
-			transform-origin: center;
-		}
+    .skilledImage {
+      transform: scale(1.03);
+      transform-origin: center;
+    }
 
-		.skilledCircle {
-			transform: scale(1.15);
-			transform-origin: center;
-		}
-	}
+    .skilledCircle {
+      transform: scale(1.15) rotate(360deg); /* Kết hợp scale và rotate khi hover */
+      transform-origin: center;
+    }
+  }
 }
