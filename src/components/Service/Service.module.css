@@ -1,0 +1,25 @@
+.serviceCardCol {
+  &:last-child {
+    .serviceCard {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.serviceCard {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.5px;
+    height: 70%;
+    background-color: var(--mantine-color-main-0);
+    z-index: 1;
+  }
+}
