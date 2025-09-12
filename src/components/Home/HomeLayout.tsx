@@ -4,6 +4,7 @@ import { AppShell } from "@mantine/core";
 import { PropsWithChildren, useEffect, useState } from "react";
 import classes from "./HomeLayout.module.css";
 import { Header } from "../Header";
+import { Footer } from "../Footer";
 
 export const HomeLayout: React.FC<PropsWithChildren> = ({ children }) => {
 	const [pinned, setPinned] = useState(false);
@@ -25,6 +26,7 @@ export const HomeLayout: React.FC<PropsWithChildren> = ({ children }) => {
 			</AppShell.Header>
 
 			<AppShell.Main p={0}>{children}</AppShell.Main>
+			<Footer />
 		</AppShell>
 	);
 };

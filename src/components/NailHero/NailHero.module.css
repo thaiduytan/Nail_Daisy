@@ -5,6 +5,10 @@
   transform: translateX(-50%)!important;
   width: 70%;
   height: 365px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
 
   @media (max-width: 1400px) {
     bottom: -25%;

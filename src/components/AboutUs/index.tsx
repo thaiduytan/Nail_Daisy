@@ -12,6 +12,7 @@ import {
   Text,
   Title,
 } from "@mantine/core"
+import classes from "./AboutUs.module.css"
 
 export const AboutUs: React.FC = () => {
   const feedbacks = [
@@ -89,6 +90,7 @@ export const AboutUs: React.FC = () => {
           slideSize="33.333333%"
           slideGap={190}
           emblaOptions={{ loop: true, align: "start", slidesToScroll: 3 }}
+          classNames={{controls: classes.controls, control: classes.control}}
         >
           {feedbacks.map((item, index) => (
             <Carousel.Slide key={index}>

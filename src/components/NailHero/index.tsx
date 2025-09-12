@@ -176,7 +176,7 @@ export const NailHero: React.FC = () => {
             }}
             style={{ zIndex: 3 }}
           >
-            <Grid gutter={10}>
+            <Grid gutter={10} top={"30%"} >
               <GridCol span={6}>
                 <motion.div
                   className={classes.imageWrapper}

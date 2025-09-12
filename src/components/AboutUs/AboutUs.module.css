@@ -1,0 +1,29 @@
+.controls{
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: rem(350px);
+    left: -50px;
+    }
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    width: rem(700px);
+    left: -50px;
+    }
+
+    @media (min-width: $mantine-breakpoint-md) {
+    width: rem(950px);
+    }
+
+  @media (min-width: $mantine-breakpoint-xl) {
+    width: rem(1350px);
+    left: -40px;
+    }
+
+      @media (min-width: $mantine-breakpoint-xxl) {
+    width: rem(2500px);
+    left: -50px;
+    }
+}
+
+.control{
+  background-color: #FBD2E0;
+}
