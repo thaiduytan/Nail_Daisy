@@ -82,7 +82,7 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
 
 	return (
 		<>
-			<Container size="xl" mx="auto">
+			<Container size="xl" mx="auto" visibleFrom="sm">
 				<Flex align="center" justify="space-between" w="100%" h={60}>
 					<Flex align="center" gap={30}>
 						<Group gap={10}>
@@ -145,7 +145,7 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
 					ease: "easeInOut",
 				}}
 			>
-				<Group
+				<Group visibleFrom="sm"
 					classNames={{ root: classes.headerBottomContent }}
 					w="100%"
 					h={{
