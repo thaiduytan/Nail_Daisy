@@ -151,10 +151,10 @@ export const NailHero: React.FC = () => {
                   ta="center"
                   m="0 auto"
                   tt="capitalize"
-                  fz={42}
-                  fw="bold"
+                  fz={{ base: 30, sm: 42 }}
+                  fw={{ base: 700, sm: "bold" }}
                   c="white"
-                  w="70%"
+                  w={{ base: "100%", sm: "70%" }}
                 >
                   We Care About Your Nail And Your well-Being
                 </Title>
@@ -177,7 +177,7 @@ export const NailHero: React.FC = () => {
             style={{ zIndex: 3 }}
           >
             <Grid gutter={10} top={"30%"} >
-              <GridCol span={6}>
+              <GridCol span={{ base: 12, sm: 6 }}>
                 <motion.div
                   className={classes.imageWrapper}
                   whileHover={{
@@ -215,7 +215,7 @@ export const NailHero: React.FC = () => {
                   />
                 </motion.div>
               </GridCol>
-              <GridCol span={6}>
+              <GridCol span={{ base: 12, sm: 6 }}>
                 <motion.div
                   className={classes.imageWrapper}
                   whileHover={{

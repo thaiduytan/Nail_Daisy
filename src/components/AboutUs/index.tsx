@@ -70,7 +70,7 @@ export const AboutUs: React.FC = () => {
 
   return (
     <Box component="section" pt={80}>
-      <Container fluid mx={70}>
+      <Container fluid mx={{ base: 0, sm: 70 }}>
         <Title
           className={lora.className}
           order={2}
@@ -85,12 +85,11 @@ export const AboutUs: React.FC = () => {
 
         <Carousel
           py={20}
-          withIndicators
-          height={200}
-          slideSize="33.333333%"
+          h={{ base: 250, sm: 200 }}
+          slideSize={{ base: "100%", sm:"33.333333%" }}
           slideGap={190}
           emblaOptions={{ loop: true, align: "start", slidesToScroll: 3 }}
-          classNames={{controls: classes.controls, control: classes.control}}
+          classNames={{viewport: classes.viewport,controls: classes.controls, control: classes.control}}
         >
           {feedbacks.map((item, index) => (
             <Carousel.Slide key={index}>

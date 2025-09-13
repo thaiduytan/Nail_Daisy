@@ -13,6 +13,10 @@
   @media (max-width: 1400px) {
     bottom: -25%;
   }
+
+    @media (max-width: $mantine-breakpoint-xs) {
+        bottom: -15%;
+    }
 }
 
 /* Enhanced background image with better fallback */

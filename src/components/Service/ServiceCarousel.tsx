@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { lora } from "@/theme/fonts"
-import { Flex, Grid, Image, Text, Title, UnstyledButton,Box } from "@mantine/core"
-import { useMemo } from "react"
-import classes from "./Service.module.css"
-import { ServiceCarousel } from "./ServiceCarousel"
+import { lora } from "@/theme/fonts";
+import { Flex, Image, Text, Title, UnstyledButton } from "@mantine/core";
+import { useMemo } from "react";
+import classes from "./Service.module.css";
+import { Carousel } from "@mantine/carousel";
 
 export type ServiceType = {
-  image: string
-  title: string
-  description: string
-  href?: string
-}
+  image: string;
+  title: string;
+  description: string;
+  href?: string;
+};
 
-export const ServiceList: React.FC = () => {
+export const ServiceCarousel: React.FC = () => {
   const serviceList: ServiceType[] = useMemo(() => {
     return [
       {
@@ -40,22 +40,28 @@ export const ServiceList: React.FC = () => {
         description:
           "Tincidunt euismod sem eget mauris et interdum neque. Fames sed tortor.",
       },
-    ]
-  }, [])
+    ];
+  }, []);
   return (
-    <Box>
-    <Grid gutter={0} visibleFrom="sm">
+    <Carousel
+      hiddenFrom="xs"
+      classNames={{
+        slide: classes.slide,
+        controls: classes.controls,
+        control: classes.control,
+      }}
+      p={"0 20px"}
+    >
       {serviceList.map((service) => (
-        <Grid.Col
+        <Carousel.Slide
           className={classes.serviceCardCol}
           key={service.title}
-          span={3}
-          p={0}
+          p={" 0 10px"}
         >
           <Flex
             classNames={{ root: classes.serviceCard }}
-            direction="column"
-            gap={10}
+            direction={"column"}
+            gap={30}
             align="center"
             justify="center"
           >
@@ -70,26 +76,24 @@ export const ServiceList: React.FC = () => {
               ta="center"
               className={lora.className}
               order={3}
-              c="main.0"
+              c="#ffffff"
               fw={300}
               fz={30}
             >
               {service.title}
             </Title>
-            <Text ta="center" fz={16}>
+            <Text c="#ffffff" ta="center" fz={16}>
               Penatibus in nunc tortor eu. Euismod vehicula sit aliquet viverra
               molestie.
             </Text>
             <UnstyledButton mt={10}>
-              <Text ta="center" fz={16} fw={600} tt="uppercase">
+              <Text c="#ffffff" ta="center" fz={16} fw={600} tt="uppercase">
                 View details
               </Text>
             </UnstyledButton>
           </Flex>
-        </Grid.Col>
+        </Carousel.Slide>
       ))}
-    </Grid>
-    <ServiceCarousel />
-</Box>
-  )
-}
+    </Carousel>
+  );
+};
