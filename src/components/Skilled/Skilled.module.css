@@ -11,6 +11,15 @@
   font-size: 15px;
   font-weight: 400 !important;
   color: #625e5ea4 !important;
+  
+  @media (max-width: $mantine-breakpoint-xs) {
+    color: #f0f0f0 !important;
+    width: rem(350px);
+  }
+
+  @media (mim-width: $mantine-breakpoint-sm) {
+    color: #625e5ea4 !important;
+  }
 }
 
 .skilledGroup {
@@ -55,5 +64,19 @@
       transform: scale(1.15) rotate(360deg); /* Kết hợp scale và rotate khi hover */
       transform-origin: center;
     }
+  }
+}
+
+.container {
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: rem(425px);
+    background-image: url("/assets/skilled/img_skilled_mobile.svg");
+    height: rem(708px);
+    position: relative;
+    padding-inline: 0 !important;
+    margin-inline: 0 !important ;
   }
 }

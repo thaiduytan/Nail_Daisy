@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
     //   h={175}
       bg={"#0D0105"}
       style={{ alignItems: "center" }}
-      p={{ base:  "10px 10px 0", xl: "10px 100px 0" }}
+      p={{ base:  "10px 10px 0", xl: "10px 100px 0", "xxl": "10px 150px 0" }}
     >
       <Flex
         direction={{ base: "column-reverse",sm: "column-reverse", xl: "row" }}
