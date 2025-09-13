@@ -5,22 +5,22 @@
     }
 
   @media (min-width: $mantine-breakpoint-sm) {
-    width: rem(700px);
+    width: 116%;
     left: -50px;
     }
 
     @media (min-width: $mantine-breakpoint-md) {
-    width: rem(950px);
+    width: 112%;
     }
 
   @media (min-width: $mantine-breakpoint-xl) {
-    width: rem(1350px);
-    left: -40px;
+    width: 110%;
+    left: -65px;
     }
 
       @media (min-width: $mantine-breakpoint-xxl) {
-    width: rem(2500px);
-    left: -50px;
+    width: 105%;
+    left: -55px;
     }
 }
 
