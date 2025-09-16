@@ -11,7 +11,7 @@
   font-size: 15px;
   font-weight: 400 !important;
   color: #625e5ea4 !important;
-  
+
   @media (max-width: $mantine-breakpoint-xs) {
     color: #f0f0f0 !important;
     width: rem(350px);
@@ -24,6 +24,14 @@
 
 .skilledGroup {
   transition: transform 0.3s ease-in-out;
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    align-items: flex-start;
+  }
+
+  @media (min-width: $mantine-breakpoint-md) {
+    align-items: center;
+  }
 
   .skilledBox {
     position: absolute;
@@ -47,6 +55,14 @@
     transition-delay: 0.25s;
     animation: rotate 10s linear infinite;
     transform-origin: center; /* Đảm bảo vòng tròn quay từ giữa */
+
+    @media (min-width: $mantine-breakpoint-sm) {
+    bottom: 20px;
+    }
+
+    @media (min-width: $mantine-breakpoint-md) {
+    bottom: -35px;
+    }
   }
 
   &:hover {

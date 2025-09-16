@@ -35,3 +35,9 @@
     padding: 0 30px;
   }
 }
+
+.slide {
+  @media (min-width: $mantine-breakpoint-sm) {
+    padding-inline-end: 0 !important;
+  }
+}

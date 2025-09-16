@@ -1,8 +1,8 @@
 .nailHeroThumb {
   position: absolute;
   bottom: -15%;
-  left: 50%!important;
-  transform: translateX(-50%)!important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   width: 70%;
   height: 365px;
   display: flex;
@@ -14,9 +14,25 @@
     bottom: -25%;
   }
 
-    @media (max-width: $mantine-breakpoint-xs) {
-        bottom: -15%;
-    }
+  @media (max-width: $mantine-breakpoint-xs) {
+    bottom: -15%;
+  }
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    bottom: -13%;
+  }
+
+  @media (min-width: $mantine-breakpoint-md) {
+    bottom: -15%;
+  }
+
+    @media (min-width: $mantine-breakpoint-xl) {
+    bottom: -20%;
+  }
+
+    @media (min-width: $mantine-breakpoint-xxl) {
+    bottom: -25%;
+  }
 }
 
 /* Enhanced background image with better fallback */
@@ -32,7 +48,6 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 /* Added floating particles container */
 .floatingParticles {

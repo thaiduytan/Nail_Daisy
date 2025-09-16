@@ -72,7 +72,7 @@ export const ServiceList: React.FC = () => {
               order={3}
               c="main.0"
               fw={300}
-              fz={30}
+              fz={{ base: 30, sm: 25, md: 30 }}
             >
               {service.title}
             </Title>
