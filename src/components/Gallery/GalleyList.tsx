@@ -2,6 +2,7 @@
 
 import { Grid, Image } from "@mantine/core"
 import { motion } from "framer-motion"
+import { GalleyCarousel } from "./GalleryCarousel"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -69,7 +70,7 @@ export const GalleyList: React.FC = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <Grid gutter={20}>
+      <Grid gutter={20} visibleFrom="sm">
         {images.map((image) => (
           <Grid.Col key={image.alt} span={image.span} mt={image.mt}>
             <motion.div variants={itemVariants}>
@@ -112,6 +113,7 @@ export const GalleyList: React.FC = () => {
           </Grid.Col>
         ))}
       </Grid>
+      <GalleyCarousel />
     </motion.div>
   )
 }

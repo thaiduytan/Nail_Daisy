@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { lora } from "@/theme/fonts"
-import { Carousel } from "@mantine/carousel"
+import { lora } from "@/theme/fonts";
+import { Carousel } from "@mantine/carousel";
 import {
   Avatar,
   Box,
@@ -11,10 +11,14 @@ import {
   Stack,
   Text,
   Title,
-} from "@mantine/core"
-import classes from "./AboutUs.module.css"
+} from "@mantine/core";
+import classes from "./AboutUs.module.css";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 export const AboutUs: React.FC = () => {
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
+
   const feedbacks = [
     {
       avatar: "https://i.pravatar.cc/150?img=5",
@@ -66,11 +70,11 @@ export const AboutUs: React.FC = () => {
       text: "Excellent experience overall, from booking to finish. Highly recommended.",
       rating: 4.5,
     },
-  ]
+  ];
 
   return (
     <Box component="section" pt={80}>
-      <Container fluid mx={70}>
+      <Container fluid mx={{ base: 0, sm: 70 }}>
         <Title
           className={lora.className}
           order={2}
@@ -85,18 +89,26 @@ export const AboutUs: React.FC = () => {
 
         <Carousel
           py={20}
-          withIndicators
-          height={200}
-          slideSize="33.333333%"
+          h={{ base: 250, sm: 300 }}
+          slideSize={{ base: "100%", sm: "33.333333%", md: "33.333333%", lg: "33.333333%", xl: "25%" }}
           slideGap={190}
           emblaOptions={{ loop: true, align: "start", slidesToScroll: 3 }}
-          classNames={{controls: classes.controls, control: classes.control}}
+          plugins={[autoplay.current]}
+          onMouseEnter={autoplay.current.stop}
+          onMouseLeave={() => autoplay.current.play()}
+          classNames={{
+            viewport: classes.viewport,
+            controls: classes.controls,
+            control: classes.control,
+            slide: classes.slide,
+          }}
+          style={{gap: "20px"}}
         >
           {feedbacks.map((item, index) => (
             <Carousel.Slide key={index}>
               <Stack gap={10} align="center">
                 <Avatar src={item.avatar} size={70} />
-                <Text ta="center" fz={14} fw={400}>
+                <Text ta="center" fz={14} fw={400} h={70} p={"0 20px"}>
                   {item.text}
                 </Text>
                 <Card
@@ -124,5 +136,5 @@ export const AboutUs: React.FC = () => {
         </Carousel>
       </Container>
     </Box>
-  )
-}
+  );
+};

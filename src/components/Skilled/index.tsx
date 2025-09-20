@@ -22,14 +22,14 @@ export const Skilled: React.FC = () => {
   return (
     <Box component="section" py={{ base: 100, sm: 80 }}>
       <Container size="xl" mx="auto" className={classes.container}>
-        <Grid gutter={60} display={{ base: "block", md: "flex" }}>
+        <Grid gutter={60} display={{ base: "block", sm: "flex" }}>
           <Grid.Col span={5}>
             <Flex
               direction="column"
               justify={{ base: "space-between" }}
               h={"100%"}
               gap={15}
-              pos={{ base: "absolute", md: "unset" }}
+              pos={{ base: "absolute", sm: "relative" }}
               columnGap={{ base: 50 }}
               bottom={{ base: "5%" }}
               left={{ base: "10%" }}
@@ -57,7 +57,7 @@ export const Skilled: React.FC = () => {
                 className={lora.className}
                 order={2}
                 tt="capitalize"
-                fz={42}
+                fz={{ base: 42, sm: 38, md: 42 }}
                 fw={400}
                 w={{ base: 200, sm: "100%" }}
                 c={{ base: "#f0f0f0", sm: "#444444" }}
@@ -90,7 +90,7 @@ export const Skilled: React.FC = () => {
                   <Stack gap={0}>
                     <Text
                       className={lora.className}
-                      fz={42}
+                      fz={{ base: 42, sm: 38, md: 42 }}
                       fw={500}
                       c="main.0"
                       lh={1.2}
@@ -136,6 +136,7 @@ export const Skilled: React.FC = () => {
                   type="primary"
                   size="md"
                   radius="sm"
+                  right={{ base: 6, sm: "unset" }}
                   w={{ base: "100%", sm: 180 }}
                   h={45}
                   iconLeft={
@@ -166,7 +167,7 @@ export const Skilled: React.FC = () => {
               }}
               pos="relative"
               justify="center"
-              align="center"
+              align={"center"}
               h="100%"
               w="100%"
             >
@@ -184,7 +185,7 @@ export const Skilled: React.FC = () => {
                 className={classes.skilledImage}
                 src="/assets/skilled/img_skilled.png"
                 alt="nail art skilled"
-                w="auto"
+                w={{ base: "auto", sm: 420 }}
                 h={420}
                 fit="cover"
               />

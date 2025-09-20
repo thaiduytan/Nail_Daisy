@@ -4,9 +4,9 @@ import { ButtonOutline } from "../Gallery/ButtonOutline"
 
 export const Service: React.FC = () => {
   return (
-    <Box component="section" pt={80}>
+    <Box component="section" pt={{ base: 0, sm: 80 }}>
       <Container size="xl" mx="auto">
-        <Flex direction="column" gap={50} p={0}>
+        <Flex direction={{ base: "column-reverse", sm: "column" }} gap={{ base: 20, sm: 50 }} p={0}>
           <ServiceList />
           <ButtonOutline>View all services</ButtonOutline>
         </Flex>

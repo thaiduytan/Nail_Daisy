@@ -1,29 +1,43 @@
-.controls{
+.controls {
   @media (max-width: $mantine-breakpoint-xs) {
-    width: rem(350px);
-    left: -50px;
-    }
+    width: 110%;
+    left: -20px;
+  }
 
   @media (min-width: $mantine-breakpoint-sm) {
-    width: rem(700px);
+    width: 116%;
     left: -50px;
-    }
+  }
 
-    @media (min-width: $mantine-breakpoint-md) {
-    width: rem(950px);
-    }
+  @media (min-width: $mantine-breakpoint-md) {
+    width: 112%;
+  }
 
   @media (min-width: $mantine-breakpoint-xl) {
-    width: rem(1350px);
-    left: -40px;
-    }
+    width: 110%;
+    left: -65px;
+  }
 
-      @media (min-width: $mantine-breakpoint-xxl) {
-    width: rem(2500px);
-    left: -50px;
-    }
+  @media (min-width: $mantine-breakpoint-xxl) {
+    width: 105%;
+    left: -55px;
+  }
 }
 
-.control{
-  background-color: #FBD2E0;
+.control {
+  background-color: #ffffff;
+  box-shadow: none;
+  color: #f666ae;
+}
+
+.viewport {
+  @media (max-width: $mantine-breakpoint-xs) {
+    padding: 0 30px;
+  }
+}
+
+.slide {
+  @media (min-width: $mantine-breakpoint-sm) {
+    padding-inline-end: 0 !important;
+  }
 }
