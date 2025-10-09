@@ -25,6 +25,7 @@ import GooeyNav from "./Navigation/Navigation";
 import { motion } from "framer-motion";
 import { GradientText } from "../UI/GradientText/GradientText";
 import { DrawerNav } from "./Drawer/DrawerNav";
+import { MenuImg } from "./MenuImg";
 
 const socialLinks = [
   {
@@ -185,6 +186,7 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
               timeVariance={300}
               colors={[1, 2, 3, 1, 2, 3, 1, 4]}
             />
+            <MenuImg />
             <ButtonDaisy
               type="primary"
               size="md"
