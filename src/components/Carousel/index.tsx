@@ -9,17 +9,7 @@ import { useRef } from "react";
 export const Carousel: React.FC = () => {
   const autoplay = useRef(Autoplay({ delay: 3000 }));
   return (
-    <MantineCarousel
-      classNames={{
-        indicators: classes.indicators,
-        indicator: classes.indicator,
-      }}
-      withIndicators
-      withControls={false}
-      plugins={[autoplay.current]}
-      onMouseEnter={autoplay.current.stop}
-      onMouseLeave={() => autoplay.current.play()}
-    >
+    <>
       <Flex
         pos={"absolute"}
         hiddenFrom="xs"
@@ -29,7 +19,7 @@ export const Carousel: React.FC = () => {
         align="flex-start"
         bottom={"30%"}
         left={"5%"}
-        style={{ zIndex: 100}}
+        style={{ zIndex: 100 }}
       >
         <Text fz={48} c={"#F666AE"} fw={700}>
           BEAUTY
@@ -38,37 +28,49 @@ export const Carousel: React.FC = () => {
           WE BRING IT TO YOU
         </Text>
       </Flex>
-      <MantineCarousel.Slide>
-        <BackgroundImage
-          src="/assets/carousel/bg_1.png"
-          w="100%"
-          h={{ base: 660, xl: 500, xxl: 640 }}
-          bgsz="cover"
-          bgp="center"
-        ></BackgroundImage>
-      </MantineCarousel.Slide>
-      <MantineCarousel.Slide>
-        <BackgroundImage
-          src="/assets/carousel/bg_1.png"
-          w="100%"
-          h={{ base: 660, xl: 500, xxl: 640 }}
-          bgsz="cover"
-          bgp="center"
-        >
-          abc
-        </BackgroundImage>
-      </MantineCarousel.Slide>
-      <MantineCarousel.Slide>
-        <BackgroundImage
-          src="/assets/carousel/bg_1.png"
-          w="100%"
-          h={{ base: 660, xl: 500, xxl: 640 }}
-          bgsz="cover"
-          bgp="center"
-        >
-          abc
-        </BackgroundImage>
-      </MantineCarousel.Slide>
-    </MantineCarousel>
+      <MantineCarousel
+        classNames={{
+          indicators: classes.indicators,
+          indicator: classes.indicator,
+        }}
+        withIndicators
+        withControls={false}
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={() => autoplay.current.play()}
+      >
+        <MantineCarousel.Slide>
+          <BackgroundImage
+            src="/assets/carousel/bg_1.png"
+            w="100%"
+            h={{ base: 660, xl: 500, xxl: 640 }}
+            bgsz="cover"
+            bgp="center"
+          ></BackgroundImage>
+        </MantineCarousel.Slide>
+        <MantineCarousel.Slide>
+          <BackgroundImage
+            src="/assets/carousel/bg_1.png"
+            w="100%"
+            h={{ base: 660, xl: 500, xxl: 640 }}
+            bgsz="cover"
+            bgp="center"
+          >
+            abc
+          </BackgroundImage>
+        </MantineCarousel.Slide>
+        <MantineCarousel.Slide>
+          <BackgroundImage
+            src="/assets/carousel/bg_1.png"
+            w="100%"
+            h={{ base: 660, xl: 500, xxl: 640 }}
+            bgsz="cover"
+            bgp="center"
+          >
+            abc
+          </BackgroundImage>
+        </MantineCarousel.Slide>
+      </MantineCarousel>
+    </>
   );
 };

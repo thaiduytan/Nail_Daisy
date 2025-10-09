@@ -20,25 +20,25 @@ export const ServiceCarousel: React.FC = () => {
         image: "/assets/service/nail_art.png",
         title: "Nail Art",
         description:
-          "Penatibus in nunc tortor eu. Euismod vehicula sit aliquet viverra molestie.",
+          "Turn your nails into tiny works of art. From minimalist lines to bold, colorful patterns — we bring your vision to life.",
       },
       {
         image: "/assets/service/manicure.png",
         title: "Manicure",
         description:
-          "Ullamcorper vestibulum varius adipiscing eu. Lorem nibh elementum id leo.",
+          "A perfect manicure for any occasion. Clean, shape, nourish, and shine — your hands will thank you.",
       },
       {
         image: "/assets/service/pedicure.png",
         title: "Pedicure",
         description:
-          "Elementum cras rhoncus feugiat rhoncus sapien et Nunc aliquam.",
+          "Relax and indulge. Our soothing pedicure treatments rejuvenate your feet and leave them silky soft.",
       },
       {
         image: "/assets/service/other_services.png",
         title: "Other Services",
         description:
-          "Tincidunt euismod sem eget mauris et interdum neque. Fames sed tortor.",
+          "Waxing, hand spa, gel removal, and more — all in one relaxing beauty space.",
       },
     ];
   }, []);
@@ -82,9 +82,8 @@ export const ServiceCarousel: React.FC = () => {
             >
               {service.title}
             </Title>
-            <Text c="#ffffff" ta="center" fz={16}>
-              Penatibus in nunc tortor eu. Euismod vehicula sit aliquet viverra
-              molestie.
+            <Text c="#ffffff" ta="center" fz={16} h={74}>
+              {service.description}
             </Text>
             <UnstyledButton mt={10}>
               <Text c="#ffffff" ta="center" fz={16} fw={600} tt="uppercase">

@@ -15,9 +15,9 @@ export const Footer: React.FC = () => {
         gap={{ base: 10, xl: 50 }}
       >
         <Box display={"flex"}  style={{ flexDirection: "row", gap: 20 }}>
-          <Text c={"#f0f0f0"}>Privacy Policy</Text>
+          <Text fz={14} c={"#f0f0f0"}>Privacy Policy</Text>
           <Divider my={5} orientation="vertical" />
-          <Text c={"#f0f0f0"}>Terms & Condition</Text>
+          <Text fz={14} c={"#f0f0f0"}>Terms & Condition</Text>
         </Box>
         <Flex
           w={{ base: "100%", xl: "55%" }}
@@ -25,25 +25,25 @@ export const Footer: React.FC = () => {
           justify={"space-between"}
           align={"center"}
         >
-          <Image fit="cover" w={{ base: 100, sm: 150 }} src="/LogoDA.svg" alt="logo" />
+          <Image fit="cover" w={{ base: 150, sm: 170 }} src="/LogoDA.svg" alt="logo" />
           <Box display={"flex"} style={{ flexDirection: "row", gap: 15 }}>
             <Image
               fit="cover"
-              w={30}
+              w={31}
               h={30}
               src="/assets/media/Facebook.svg"
               alt="logo"
             />
             <Image
               fit="cover"
-              w={30}
+              w={31}
               h={30}
               src="/assets/media/Twitter.svg"
               alt="logo"
             />
             <Image
               fit="cover"
-              w={30}
+              w={31}
               h={30}
               src="/assets/media/Instagram.svg"
               alt="logo"
@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
           padding: 10,
         }}
       >
-        <Text c={"#8D8789"}>
+        <Text c={"#8D8789"} fz={9}>
           Copyright © 2022 Nail Art Studio, All rights reserved.
         </Text>
       </Box>

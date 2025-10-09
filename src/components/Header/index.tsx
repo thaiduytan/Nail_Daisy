@@ -141,7 +141,7 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
             md: 80,
           }}
           px={{
-			base: 10,
+      base: 5,
 			sm: 20,
 		  }}
         >

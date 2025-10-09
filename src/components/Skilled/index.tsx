@@ -31,8 +31,7 @@ export const Skilled: React.FC = () => {
               gap={15}
               pos={{ base: "absolute", sm: "relative" }}
               columnGap={{ base: 50 }}
-              bottom={{ base: "5%" }}
-              left={{ base: "10%" }}
+              classNames={{ root: classes.FlexRoot }}
             >
               <Text
                 tt="uppercase"
@@ -76,11 +75,8 @@ export const Skilled: React.FC = () => {
                 Skilled Nail Art
               </Title>
               <ShinyText
-                text="Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit. Accumsan tincidunt quam urna
-								quis integer quis in arcu. Dui feugiat mi
-								placerat ipsum. At tempus sed malesuada aenean
-								eget consectetur lacus."
+                text="Where creativity meets care. At NailsArt Studio, every nail is a canvas and every design tells your story.
+Enjoy a luxurious experience with personalized treatments, premium products, and meticulous artistry that keeps your hands flawless."
                 disabled={false}
                 speed={2}
                 className={`${lora.className} ${classes.shinyText}`}
