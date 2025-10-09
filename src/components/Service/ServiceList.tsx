@@ -1,17 +1,25 @@
-"use client"
+"use client";
 
-import { lora } from "@/theme/fonts"
-import { Flex, Grid, Image, Text, Title, UnstyledButton,Box } from "@mantine/core"
-import { useMemo } from "react"
-import classes from "./Service.module.css"
-import { ServiceCarousel } from "./ServiceCarousel"
+import { lora } from "@/theme/fonts";
+import {
+  Flex,
+  Grid,
+  Image,
+  Text,
+  Title,
+  UnstyledButton,
+  Box,
+} from "@mantine/core";
+import { useMemo } from "react";
+import classes from "./Service.module.css";
+import { ServiceCarousel } from "./ServiceCarousel";
 
 export type ServiceType = {
-  image: string
-  title: string
-  description: string
-  href?: string
-}
+  image: string;
+  title: string;
+  description: string;
+  href?: string;
+};
 
 export const ServiceList: React.FC = () => {
   const serviceList: ServiceType[] = useMemo(() => {
@@ -40,55 +48,61 @@ export const ServiceList: React.FC = () => {
         description:
           "Waxing, hand spa, gel removal, and more — all in one relaxing beauty space.",
       },
-    ]
-  }, [])
+    ];
+  }, []);
   return (
     <Box>
-    <Grid gutter={0} visibleFrom="sm">
-      {serviceList.map((service) => (
-        <Grid.Col
-          className={classes.serviceCardCol}
-          key={service.title}
-          span={3}
-          p={0}
-        >
-          <Flex
-            classNames={{ root: classes.serviceCard }}
-            direction="column"
-            gap={10}
-            align="center"
-            justify="center"
+      <Grid
+        classNames={{ inner: classes.serviceGridInner }}
+        gutter={{ base: 0, sm: 10, md: 0 }}
+        visibleFrom="sm"
+      >
+        {serviceList.map((service) => (
+          <Grid.Col
+            className={classes.serviceCardCol}
+            key={service.title}
+            span={{ base: 12, sm: 6, md: 6, lg: 3 }}
+            p={0}
+            maw={{ base: 400, sm: 360, md: 400, lg: "100%" }}
+            w={"100%"}
           >
-            <Image
-              src={service.image}
-              alt={service.title}
-              fit="cover"
-              w="auto"
-              h={84}
-            />
-            <Title
-              ta="center"
-              className={lora.className}
-              order={3}
-              c="main.0"
-              fw={300}
-              fz={{ base: 30, sm: 25, md: 30 }}
+            <Flex
+              classNames={{ root: classes.serviceCard }}
+              direction="column"
+              gap={10}
+              align="center"
+              justify="center"
             >
-              {service.title}
-            </Title>
-            <Text ta="center" fz={16} h={74}>
-              {service.description}
-            </Text>
-            <UnstyledButton mt={10}>
-              <Text ta="center" fz={16} fw={600} tt="uppercase">
-                View details
+              <Image
+                src={service.image}
+                alt={service.title}
+                fit="cover"
+                w="auto"
+                h={84}
+              />
+              <Title
+                ta="center"
+                className={lora.className}
+                order={3}
+                c="main.0"
+                fw={300}
+                fz={{ base: 30, sm: 25, md: 30 }}
+              >
+                {service.title}
+              </Title>
+              <Text ta="center" fz={16} h={74}>
+                {service.description}
               </Text>
-            </UnstyledButton>
-          </Flex>
-        </Grid.Col>
-      ))}
-    </Grid>
-    <ServiceCarousel />
-</Box>
-  )
-}
+              <UnstyledButton mt={10}>
+                <Text ta="center" fz={16} fw={600} tt="uppercase">
+                  View details
+                </Text>
+              </UnstyledButton>
+            </Flex>
+          </Grid.Col>
+        ))}
+      </Grid>
+      <ServiceCarousel />
+    </Box>
+  );
+};

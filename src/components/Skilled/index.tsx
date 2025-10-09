@@ -75,8 +75,7 @@ export const Skilled: React.FC = () => {
                 Skilled Nail Art
               </Title>
               <ShinyText
-                text="Where creativity meets care. At NailsArt Studio, every nail is a canvas and every design tells your story.
-Enjoy a luxurious experience with personalized treatments, premium products, and meticulous artistry that keeps your hands flawless."
+                text="Where creativity meets care. At NailsArt Studio, every nail is a canvas and every design tells your story.   Enjoy a luxurious experience with personalized treatments, premium products, and meticulous artistry that keeps your hands flawless."
                 disabled={false}
                 speed={2}
                 className={`${lora.className} ${classes.shinyText}`}
@@ -181,7 +180,7 @@ Enjoy a luxurious experience with personalized treatments, premium products, and
                 className={classes.skilledImage}
                 src="/assets/skilled/img_skilled.png"
                 alt="nail art skilled"
-                w={{ base: "auto", sm: 420 }}
+                w={{ base: "auto", sm: 420, md: 550,xl: 700 }}
                 h={420}
                 fit="cover"
               />
@@ -199,36 +198,41 @@ Enjoy a luxurious experience with personalized treatments, premium products, and
             </Group>
           </Grid.Col>
         </Grid>
-        <Image
-          hiddenFrom="xs"
-          pos={"absolute"}
-          top={-80}
-          right={-40}
-          className={classes.skilledCircle}
-          style={{
-            zIndex: -1,
+
+        <Group
+          classNames={{
+            root: classes.skilledGroup,
           }}
-          src="/assets/skilled/circle_pink.png"
-          alt="nail art skilled"
-          w={145}
-          h={145}
-          fit="cover"
-        />
-        <Image
+          pos="relative"
+          justify="center"
+          align={"center"}
+          h="100%"
+          w="100%"
           hiddenFrom="xs"
-          pos={"absolute"}
-          bottom={-75}
-          left={-40}
-          className={classes.skilledCircle}
-          style={{
-            zIndex: -1,
-          }}
-          src="/assets/skilled/circle_pink.png"
-          alt="nail art skilled"
-          w={145}
-          h={145}
-          fit="cover"
-        />
+        >
+          <Image
+            className={classes.skilledCircle}
+            style={{
+              zIndex: -1,
+            }}
+            src="/assets/skilled/circle_pink.png"
+            alt="nail art skilled"
+            w={145}
+            h={145}
+            fit="cover"
+          />
+          <Image
+            className={classes.skilledCircle1}
+            style={{
+              zIndex: -1,
+            }}
+            src="/assets/skilled/circle_pink.png"
+            alt="nail art skilled"
+            w={145}
+            h={145}
+            fit="cover"
+          />
+        </Group>
       </Container>
     </Box>
   );

@@ -11,3 +11,17 @@
     transition: all 0.2 ease;
   }
 }
+
+.Anchor-root[data-active="true"] .Text-root {
+  color: #f666ae;
+}
+
+.socialLink {
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+  background: #f666ae;
+  transition: transform .3s ease;
+}
+
+.socialLink:hover { transform: translateY(-1px); }

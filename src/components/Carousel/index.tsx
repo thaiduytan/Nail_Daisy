@@ -1,7 +1,7 @@
 "use client";
 
 import { Carousel as MantineCarousel } from "@mantine/carousel";
-import { BackgroundImage, Flex, Text } from "@mantine/core";
+import { BackgroundImage, Flex, Text, Box } from "@mantine/core";
 import classes from "./Carousel.module.css";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
@@ -9,17 +9,18 @@ import { useRef } from "react";
 export const Carousel: React.FC = () => {
   const autoplay = useRef(Autoplay({ delay: 3000 }));
   return (
-    <>
+    <Box component="section">
       <Flex
         pos={"absolute"}
         hiddenFrom="xs"
         direction="column"
-        h="100%"
+        h={200}
         justify="center"
         align="flex-start"
-        bottom={"30%"}
+        bottom={"50%"}
         left={"5%"}
-        style={{ zIndex: 100 }}
+        style={{ zIndex: 10 }}
+       
       >
         <Text fz={48} c={"#F666AE"} fw={700}>
           BEAUTY
@@ -71,6 +72,6 @@ export const Carousel: React.FC = () => {
           </BackgroundImage>
         </MantineCarousel.Slide>
       </MantineCarousel>
-    </>
+    </Box>
   );
 };

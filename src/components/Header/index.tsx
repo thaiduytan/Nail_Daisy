@@ -133,7 +133,7 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
         }}
       >
         <Group
-        //   visibleFrom="sm"
+          //   visibleFrom="sm"
           classNames={{ root: classes.headerBottomContent }}
           w="100%"
           h={{
@@ -141,9 +141,9 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
             md: 80,
           }}
           px={{
-      base: 5,
-			sm: 20,
-		  }}
+            base: 5,
+            sm: 20,
+          }}
         >
           <Group flex={1} h="100%">
             <UnstyledButton component={Link} href="#">
@@ -197,7 +197,7 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
               Booking
             </ButtonDaisy>
           </Group>
-		  <DrawerNav />
+          <DrawerNav />
         </Group>
       </motion.div>
     </>

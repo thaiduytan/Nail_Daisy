@@ -4,7 +4,8 @@ import { Carousel } from "@mantine/carousel";
 import { Image } from "@mantine/core";
 import { motion } from "framer-motion";
 import classes from "./Gallery.module.css";
-
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 const itemVariants = {
   hidden: {
     opacity: 0,
@@ -53,6 +54,8 @@ const images = [
 ];
 
 export const GalleyCarousel: React.FC = () => {
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
+
   return (
     <Carousel
       hiddenFrom="xs"
@@ -61,6 +64,10 @@ export const GalleyCarousel: React.FC = () => {
         controls: classes.controls,
         control: classes.control,
       }}
+      // withControls={false}
+      plugins={[autoplay.current]}
+      onMouseEnter={autoplay.current.stop}
+      onMouseLeave={() => autoplay.current.play()}
     >
       {images.map((image) => (
         <Carousel.Slide key={image.alt}>

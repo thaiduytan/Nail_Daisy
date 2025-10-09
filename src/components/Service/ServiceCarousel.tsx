@@ -50,7 +50,8 @@ export const ServiceCarousel: React.FC = () => {
         controls: classes.controls,
         control: classes.control,
       }}
-      p={"0 20px"}
+      p={"0 5px"}
+      // withControls={false}
     >
       {serviceList.map((service) => (
         <Carousel.Slide
@@ -82,7 +83,12 @@ export const ServiceCarousel: React.FC = () => {
             >
               {service.title}
             </Title>
-            <Text c="#ffffff" ta="center" fz={16} h={74}>
+            <Text
+              c="#ffffff"
+              ta="center"
+              fz={{ base: 14, md: 14, xl: 16 }}
+              h={74}
+            >
               {service.description}
             </Text>
             <UnstyledButton mt={10}>
