@@ -8,6 +8,10 @@
   cursor: pointer;
   padding: 12px 30px;
   margin: 0 auto;
+
+  @media (max-width: $mantine-breakpoint-xs){
+    padding: 5px 15px;
+  }
 }
 
 .customButton:hover {
