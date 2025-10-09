@@ -98,7 +98,7 @@ export const AboutUs: React.FC = () => {
             xl: "25%",
           }}
           slideGap={190}
-          emblaOptions={{ loop: true, align: "start", slidesToScroll: 3 }}
+          emblaOptions={{ loop: true, align: "start", slidesToScroll: 1 }}
           plugins={[autoplay.current]}
           onMouseEnter={autoplay.current.stop}
           onMouseLeave={() => autoplay.current.play()}

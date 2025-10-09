@@ -47,7 +47,7 @@ export const Carousel: React.FC = () => {
             h={{ base: 660, xl: 500, xxl: 640 }}
             bgsz="cover"
             bgp="center"
-          ></BackgroundImage>
+          />
         </MantineCarousel.Slide>
         <MantineCarousel.Slide>
           <BackgroundImage
@@ -56,9 +56,7 @@ export const Carousel: React.FC = () => {
             h={{ base: 660, xl: 500, xxl: 640 }}
             bgsz="cover"
             bgp="center"
-          >
-            abc
-          </BackgroundImage>
+          />
         </MantineCarousel.Slide>
         <MantineCarousel.Slide>
           <BackgroundImage
@@ -67,9 +65,7 @@ export const Carousel: React.FC = () => {
             h={{ base: 660, xl: 500, xxl: 640 }}
             bgsz="cover"
             bgp="center"
-          >
-            abc
-          </BackgroundImage>
+          />
         </MantineCarousel.Slide>
       </MantineCarousel>
     </Box>
