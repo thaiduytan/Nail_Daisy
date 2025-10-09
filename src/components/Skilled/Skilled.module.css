@@ -57,11 +57,11 @@
     transform-origin: center; /* Đảm bảo vòng tròn quay từ giữa */
 
     @media (min-width: $mantine-breakpoint-sm) {
-    bottom: 20px;
+      bottom: 20px;
     }
 
     @media (min-width: $mantine-breakpoint-md) {
-    bottom: -35px;
+      bottom: -35px;
     }
   }
 
@@ -88,11 +88,23 @@
   background-repeat: no-repeat;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    width: rem(425px);
+    width: 100%;
     background-image: url("/assets/skilled/img_skilled_mobile.svg");
     height: rem(708px);
     position: relative;
     padding-inline: 0 !important;
     margin-inline: 0 !important ;
+  }
+}
+
+.FlexRoot {
+  @media (max-width: $mantine-breakpoint-xs) {
+    bottom: 5%;
+    left: 10%;
+  }
+
+  @media (max-width: rem(375px)) {
+    bottom: 5%;
+    left: 5%;
   }
 }

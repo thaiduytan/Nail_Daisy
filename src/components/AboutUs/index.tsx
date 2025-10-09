@@ -22,7 +22,7 @@ export const AboutUs: React.FC = () => {
   const feedbacks = [
     {
       avatar: "https://i.pravatar.cc/150?img=5",
-      text: "The nail service was amazing! My manicure lasted over two weeks without chipping.",
+      text: "Excellent experience from booking to finish. The salon is spotless, and the staff is lovely!",
       rating: 5,
     },
     {
@@ -32,7 +32,7 @@ export const AboutUs: React.FC = () => {
     },
     {
       avatar: "https://i.pravatar.cc/150?img=19",
-      text: "Beautiful nail art design, exactly what I wanted. Highly recommend.",
+      text: "My manicure lasted over two weeks without a chip! Best nail service I’ve ever had.",
       rating: 5,
     },
     {
@@ -42,7 +42,7 @@ export const AboutUs: React.FC = () => {
     },
     {
       avatar: "https://i.pravatar.cc/150?img=29",
-      text: "Loved the relaxing atmosphere and the friendly staff.",
+      text: "Super professional, super clean, and the designs are stunning. I’m definitely coming back!",
       rating: 5,
     },
     {
@@ -52,7 +52,7 @@ export const AboutUs: React.FC = () => {
     },
     {
       avatar: "https://i.pravatar.cc/150?img=36",
-      text: "The best pedicure I’ve ever had. Very comfortable and professional.",
+      text: "Beautiful nail art, gentle service, and relaxing atmosphere. Highly recommended.",
       rating: 5,
     },
     {
@@ -90,7 +90,13 @@ export const AboutUs: React.FC = () => {
         <Carousel
           py={20}
           h={{ base: 250, sm: 300 }}
-          slideSize={{ base: "100%", sm: "33.333333%", md: "33.333333%", lg: "33.333333%", xl: "25%" }}
+          slideSize={{
+            base: "100%",
+            sm: "33.333333%",
+            md: "33.333333%",
+            lg: "33.333333%",
+            xl: "25%",
+          }}
           slideGap={190}
           emblaOptions={{ loop: true, align: "start", slidesToScroll: 3 }}
           plugins={[autoplay.current]}
@@ -102,7 +108,7 @@ export const AboutUs: React.FC = () => {
             control: classes.control,
             slide: classes.slide,
           }}
-          style={{gap: "20px"}}
+          style={{ gap: "20px" }}
         >
           {feedbacks.map((item, index) => (
             <Carousel.Slide key={index}>
