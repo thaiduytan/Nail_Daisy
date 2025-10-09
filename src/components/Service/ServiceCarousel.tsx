@@ -49,7 +49,9 @@ export const ServiceCarousel: React.FC = () => {
         slide: classes.slide,
         controls: classes.controls,
         control: classes.control,
+        root: classes.root,
       }}
+      
       p={"0 5px"}
       // withControls={false}
     >

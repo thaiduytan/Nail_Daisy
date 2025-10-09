@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
         direction={{ base: "column-reverse",sm: "column-reverse", xl: "row" }}
         justify={"space-between"}
         align={"center"}
-        gap={{ base: 10, xl: 50 }}
+        gap={{ base: 15, xl: 50 }}
       >
         <Box display={"flex"}  style={{ flexDirection: "row", gap: 20 }}>
           <Text fz={14} c={"#f0f0f0"}>Privacy Policy</Text>
@@ -24,8 +24,9 @@ export const Footer: React.FC = () => {
           direction={{ base: "column", sm: "row" }}
           justify={"space-between"}
           align={"center"}
+          gap={15}
         >
-          <Image fit="cover" w={{ base: 150, sm: 170 }} src="/LogoDA.svg" alt="logo" />
+          <Image fit="cover" w={{ base: 200, sm: 170 }} src="/LogoDA.svg" alt="logo" />
           <Box display={"flex"} style={{ flexDirection: "row", gap: 15 }}>
             <Image
               fit="cover"

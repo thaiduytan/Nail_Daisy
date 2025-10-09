@@ -63,3 +63,10 @@
     row-gap: 40px;
   }
 }
+
+.root {
+  &[data-inactive] {
+    opacity: 0;
+    cursor: default;
+  }
+}
