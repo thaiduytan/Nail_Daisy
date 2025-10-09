@@ -131,4 +131,9 @@
     bottom: 5%;
     left: 5%;
   }
+
+    @media (max-width: rem(370px)) {
+    bottom: 5%;
+    left: 4%;
+  }
 }

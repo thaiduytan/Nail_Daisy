@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
           align={"center"}
           gap={15}
         >
-          <Image fit="cover" w={{ base: 150, sm: 170 }} src="/LogoDA.svg" alt="logo" />
+          <Image fit="cover" w={{ base: 200, sm: 170 }} src="/LogoDA.svg" alt="logo" />
           <Box display={"flex"} style={{ flexDirection: "row", gap: 15 }}>
             <Image
               fit="cover"
