@@ -1,5 +1,6 @@
 .Anchor-root,
-.Text-root {
+.Text-root,
+.MenuImg {
   color: #f666ae;
   padding: 5px 10px;
   transition: all 0.2 ease;
