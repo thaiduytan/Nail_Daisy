@@ -31,7 +31,8 @@ export const MenuImg: React.FC = () => {
         p={{
           base: "10px 30px 0px 15px",
           sm: "10px 30px 0px 15px",
-          md: "0px 30px",
+          md: "0px 20px 0px 10px",
+          lg: "0px 30px",
         }}
         tt={{ base: "uppercase", sm: "uppercase", md: "none" }}
         c={{

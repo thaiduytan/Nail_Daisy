@@ -1,3 +1,4 @@
+"use client";
 import { useDisclosure } from "@mantine/hooks";
 import {
   Drawer,

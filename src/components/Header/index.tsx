@@ -67,8 +67,13 @@ export const DEFAULT_NAVIGATION_ITEMS: NavigationType[] = [
   },
   {
     id: 4,
-    label: "Contact",
-    href: "/#contact",
+    label: "Contact Us",
+    href: "/#contact_us",
+  },
+  {
+    id: 5,
+    label: "About Us",
+    href: "/#about_us",
   },
 ];
 
