@@ -1,6 +1,6 @@
-import { Box, Container, Flex } from "@mantine/core"
-import { GalleyList } from "./GalleyList"
-import { ButtonOutline } from "./ButtonOutline"
+import { Box, Container, Flex } from "@mantine/core";
+import { GalleyList } from "./GalleyList";
+import { ButtonOutline } from "./ButtonOutline";
 
 export const Gallery: React.FC = () => {
   return (
@@ -13,5 +13,5 @@ export const Gallery: React.FC = () => {
         </Flex>
       </Container>
     </Box>
-  )
-}
+  );
+};
