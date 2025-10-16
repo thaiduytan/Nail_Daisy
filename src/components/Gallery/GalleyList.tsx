@@ -280,7 +280,7 @@
 import React from "react";
 import { Container, Grid, Image } from "@mantine/core";
 import { motion, useInView } from "framer-motion";
-import { GalleryCarousel } from "./GalleryCarousel";
+import { GalleyCarousel } from "./GalleryCarousel";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -305,7 +305,6 @@ type GalleryItem = {
   alt: string;
   span: number;
   mt?: number;
-
   videoUrl?: string;
 };
 
@@ -342,15 +341,7 @@ const items: GalleryItem[] = [
 
 export const GalleyList: React.FC = () => {
   return (
-    <Container
-      fluid
-      size={"xl"}
-      px={{ base: 5, sm: 10, md: 0, lg: 0, xl: 40 }}
-      py={10}
-      mx={5}
-      my={5}
-      style={{paddingInline: 5, marginInline: 5}}
-    >
+    <Container fluid size={"xl"} px={{ base: 0, sm: 40 }} mx="auto">
       <motion.div
         variants={containerVariants}
         // initial="hidden"
@@ -358,7 +349,7 @@ export const GalleyList: React.FC = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         {/* Dòng 1: Ảnh */}
-        <Grid gutter={20} visibleFrom="sm">
+        <Grid gutter={20} >
           {items.map((item) => (
             <Grid.Col key={item.alt} span={item.span} mt={item.mt} h={420}>
               <motion.div variants={itemVariants}>
@@ -369,7 +360,7 @@ export const GalleyList: React.FC = () => {
         </Grid>
 
         {/* Dòng 2: Video tự phát */}
-        <Grid gutter={20} visibleFrom="sm">
+        <Grid gutter={20}>
           {items.map((item) => (
             <Grid.Col key={item.alt + "_video"} span={item.span} mt={item.mt}>
               <motion.div variants={itemVariants}>
@@ -379,7 +370,7 @@ export const GalleyList: React.FC = () => {
           ))}
         </Grid>
 
-        <GalleryCarousel />
+        <GalleyCarousel />
       </motion.div>
     </Container>
   );
