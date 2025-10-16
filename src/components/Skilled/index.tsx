@@ -20,7 +20,7 @@ import { motion } from "framer-motion";
 
 export const Skilled: React.FC = () => {
   return (
-    <Box component="section" py={{ base: 100, sm: 80 }}>
+    <Box component="section" py={{ base: 100, sm: 80 }} id="skilled">
       <Container size="xl" mx="auto" className={classes.container}>
         <Grid gutter={60} display={{ base: "block", sm: "flex" }}>
           <Grid.Col span={5}>

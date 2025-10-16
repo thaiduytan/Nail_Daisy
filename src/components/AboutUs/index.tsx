@@ -73,7 +73,7 @@ export const AboutUs: React.FC = () => {
   ];
 
   return (
-    <Box component="section" pt={80}>
+    <Box component="section" pt={80} id="about_us">
       <Container fluid mx={{ base: 0, sm: 70 }}>
         <Title
           className={lora.className}

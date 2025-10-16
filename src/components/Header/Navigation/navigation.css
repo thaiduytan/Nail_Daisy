@@ -67,6 +67,13 @@
       color: white;
     }
   }
+  @media (min-width: $mantine-breakpoint-md) {
+    gap: 1em;
+  }
+
+  @media (min-width: $mantine-breakpoint-lg) {
+    gap: 2em;
+  }
 }
 
 .gooey-nav-container nav ul li {
@@ -94,7 +101,7 @@
   font-size: 16px;
   color: var(--mantine-color-dark-6);
 
-    @media (max-width: $mantine-breakpoint-sm) {
+  @media (max-width: $mantine-breakpoint-sm) {
     width: 100%;
     color: #f666ae;
   }
