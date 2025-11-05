@@ -29,7 +29,7 @@
   @media (min-width: $mantine-breakpoint-xl) {
     width: var(--mantine-breakpoint-xl);
   }
-   	/* position: fixed;
+  /* position: fixed;
 	top: rem(50px);
 	left: 50%;
 	width: var(--mantine-breakpoint-xl);
@@ -59,7 +59,7 @@
 }
 
 .socialLink {
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
   align-items: center;

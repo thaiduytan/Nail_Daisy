@@ -53,7 +53,7 @@ export const Skilled: React.FC = () => {
                 GET YOUR SHINE ON
               </Text>
               <Title
-                className={lora.className}
+                className={`${lora.className} ${classes.title}`}
                 order={2}
                 tt="capitalize"
                 fz={{ base: 42, sm: 38, md: 42 }}
@@ -71,6 +71,7 @@ export const Skilled: React.FC = () => {
                     {...props}
                   />
                 )}
+                
               >
                 Skilled Nail Art
               </Title>
@@ -80,7 +81,7 @@ export const Skilled: React.FC = () => {
                 speed={2}
                 className={`${lora.className} ${classes.shinyText}`}
               />
-              <Flex gap={{ base: 50, sm: 20 }} direction={"column"}>
+              <Flex className={classes.flexContent} gap={{ base: 50, sm: 20 }} direction={"column"}>
                 <Group gap={70} mt={10}>
                   <Stack gap={0}>
                     <Text
@@ -100,7 +101,7 @@ export const Skilled: React.FC = () => {
                       />
                       K+
                     </Text>
-                    <Text fz={14} fw={400} tt="uppercase">
+                    <Text className={classes.textCountUp} fz={14} fw={400} tt="uppercase">
                       HAPPY CUSTOMERS
                     </Text>
                   </Stack>
@@ -122,7 +123,7 @@ export const Skilled: React.FC = () => {
                       />
                       +
                     </Text>
-                    <Text fz={14} fw={400} tt="uppercase">
+                    <Text className={classes.textCountUp} fz={14} fw={400} tt="uppercase">
                       YEARS OF EXPERIENCE
                     </Text>
                   </Stack>

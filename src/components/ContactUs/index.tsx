@@ -65,7 +65,6 @@ import { Flex, Group, Stack, Text, Box, Paper, Divider, Container } from "@manti
 import {
   IconBrandFacebookFilled,
   IconBrandInstagramFilled,
-  IconBrandTiktokFilled,
   IconBrandGmail,
   IconPhoneCall,
 } from "@tabler/icons-react";
@@ -74,9 +73,8 @@ import { GradientText } from "../UI/GradientText/GradientText";
 import { ContactForm } from "./ContactForm";
 
 const socialLinks = [
-  { icon: IconBrandFacebookFilled, href: "/#" },
-  { icon: IconBrandInstagramFilled, href: "/#" },
-  { icon: IconBrandTiktokFilled, href: "/#" },
+  { icon: IconBrandFacebookFilled, href: "https://www.instagram.com/coolnailbydaisy/?igsh=MXJtN2pwOXpiMmVzaQ%3D%3D&utm_source=qr" },
+  { icon: IconBrandInstagramFilled, href: "https://www.instagram.com/coolnailbydaisy/?igsh=MXJtN2pwOXpiMmVzaQ%3D%3D&utm_source=qr" },
 ];
 
 export const ContactUs: React.FC = () => {
@@ -85,7 +83,11 @@ export const ContactUs: React.FC = () => {
 
   return (
     <Container mt={50} size="xl" mx="auto" component="section" id="contact_us">
-      <Flex direction="row" gap={{ base: 20, sm: 0 }} p={{base: 0, md : " 0 20px" }}>
+      <Flex
+        direction="row"
+        gap={{ base: 20, sm: 0 }}
+        p={{ base: 0, md: " 0 20px" }}
+      >
         <Stack w={"50%"} gap={75} justify="flex-end" visibleFrom="md">
           <Group align="flex-start" gap={30}>
             <Text w={"80%"}>
@@ -128,7 +130,7 @@ export const ContactUs: React.FC = () => {
               </Flex>
             </Box>
           </Group>
-          <Divider  color={"#f666ae"}/>
+          <Divider color={"#f666ae"} />
           <Box style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             <Text fw={600}>More Infomation</Text>
             <Flex align="flex-start" gap={15} direction={"column"}>
@@ -152,7 +154,7 @@ export const ContactUs: React.FC = () => {
                   showBorder={false}
                   className="custom-class"
                 >
-                  (209) 555-0104
+                  (+84) 1830 3886 795
                 </GradientText>
               </Group>
             </Flex>
@@ -161,5 +163,5 @@ export const ContactUs: React.FC = () => {
         <ContactForm />
       </Flex>
     </Container>
-  );
+  )
 };

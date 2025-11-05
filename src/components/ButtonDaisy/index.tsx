@@ -19,7 +19,7 @@ interface MyButtonProps
 export const ButtonDaisy: React.FC<PropsWithChildren<MyButtonProps>> = ({
 	children,
 	type,
-	href = "/",
+	href = "https://www.instagram.com/coolnailbydaisy/?igsh=MXJtN2pwOXpiMmVzaQ%3D%3D&utm_source=qr",
 	iconRight,
 	iconLeft,
 	...props
@@ -28,6 +28,7 @@ export const ButtonDaisy: React.FC<PropsWithChildren<MyButtonProps>> = ({
 		<Button
 			component={Link}
 			href={href}
+			target="_blank"
 			className={`${classes.btn} ${classes.buttonFiled}`}
 			{...props}
 		>

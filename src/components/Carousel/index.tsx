@@ -42,28 +42,28 @@ export const Carousel: React.FC = () => {
       >
         <MantineCarousel.Slide>
           <BackgroundImage
-            src="/assets/carousel/bg_1.png"
+            src="/assets/carousel/bg_2.jpg"
             w="100%"
             h={{ base: 660, xl: 500, xxl: 640 }}
-            bgsz="cover"
+            bgsz="contain"
             bgp="center"
           />
         </MantineCarousel.Slide>
         <MantineCarousel.Slide>
           <BackgroundImage
-            src="/assets/carousel/bg_1.png"
+            src="/assets/carousel/bg_3.jpg"
             w="100%"
             h={{ base: 660, xl: 500, xxl: 640 }}
-            bgsz="cover"
+            bgsz="contain"
             bgp="center"
           />
         </MantineCarousel.Slide>
         <MantineCarousel.Slide>
           <BackgroundImage
-            src="/assets/carousel/bg_1.png"
+            src="/assets/carousel/bg_4.jpg"
             w="100%"
             h={{ base: 660, xl: 500, xxl: 640 }}
-            bgsz="cover"
+            bgsz="contain"
             bgp="center"
           />
         </MantineCarousel.Slide>

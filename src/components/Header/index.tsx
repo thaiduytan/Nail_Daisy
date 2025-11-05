@@ -7,47 +7,41 @@ import {
   Paper,
   Text,
   UnstyledButton,
-  useMatches,
-} from "@mantine/core";
+} from "@mantine/core"
 import {
   IconBrandFacebookFilled,
   IconBrandGmail,
   IconBrandInstagramFilled,
-  IconBrandTiktokFilled,
   IconPhoneCall,
   IconPhoneRinging,
-} from "@tabler/icons-react";
-import classes from "./Header.module.css";
-import Link from "next/link";
-import { ButtonDaisy } from "../ButtonDaisy";
-import clsx from "clsx";
-import GooeyNav from "./Navigation/Navigation";
-import { motion } from "framer-motion";
-import { GradientText } from "../UI/GradientText/GradientText";
-import { DrawerNav } from "./Drawer/DrawerNav";
-import { MenuImg } from "./MenuImg";
+} from "@tabler/icons-react"
+import classes from "./Header.module.css"
+import Link from "next/link"
+import { ButtonDaisy } from "../ButtonDaisy"
+import clsx from "clsx"
+import GooeyNav from "./Navigation/Navigation"
+import { motion } from "framer-motion"
+import { GradientText } from "../UI/GradientText/GradientText"
+import { DrawerNav } from "./Drawer/DrawerNav"
+import { MenuImg } from "./MenuImg"
 
 const socialLinks = [
   {
     icon: IconBrandFacebookFilled,
-    href: "/#",
+    href: "https://www.instagram.com/coolnailbydaisy/?igsh=MXJtN2pwOXpiMmVzaQ%3D%3D&utm_source=qr",
   },
   {
     icon: IconBrandInstagramFilled,
-    href: "/#",
+    href: "https://www.instagram.com/coolnailbydaisy/?igsh=MXJtN2pwOXpiMmVzaQ%3D%3D&utm_source=qr",
   },
-  {
-    icon: IconBrandTiktokFilled,
-    href: "/#",
-  },
-];
+]
 export type NavigationType = {
-  id: number;
-  label: string;
-  href: string;
-  active?: boolean;
-  subNavigation?: NavigationType[];
-};
+  id: number
+  label: string
+  href: string
+  active?: boolean
+  subNavigation?: NavigationType[]
+}
 
 export const DEFAULT_NAVIGATION_ITEMS: NavigationType[] = [
   {
@@ -75,17 +69,13 @@ export const DEFAULT_NAVIGATION_ITEMS: NavigationType[] = [
     label: "About Us",
     href: "/#about_us",
   },
-];
+]
 
 export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
   const headerVariants = {
     hidden: { y: -80, x: "-50%", opacity: 0 },
     visible: { y: 5, x: "-50%", opacity: 1 },
-  };
-  const sizeIconSocial = useMatches({
-    base: 16,
-    md: 20,
-  });
+  }
 
   return (
     <>
@@ -99,14 +89,14 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
               </Text>
             </Group>
             <Group gap={10}>
-              <IconPhoneCall size={20} stroke={1.5} color="#fff" />
+              <IconPhoneCall size={20} stroke={1.5} color="#ffff00" />
               <GradientText
-                colors={["#ff0066", "#ffff00", "#00ff66", "#ff0066", "#ffff00"]}
+                colors={["#ffff00", "#00ff66", "#ffff00"]}
                 animationSpeed={3}
                 showBorder={false}
                 className="custom-class"
               >
-                (209) 555-0104
+                (+84) 1830 3886 795
               </GradientText>
             </Group>
           </Flex>
@@ -117,8 +107,11 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
                 classNames={{ root: classes.socialLink }}
                 w={{ base: 30, md: 35 }}
                 h={{ base: 30, md: 35 }}
+                component={Link}
+                href={link.href}
+                target="_blank"
               >
-                <link.icon size={sizeIconSocial} color="#fff" />
+                <link.icon size={18} color="#fff" />
               </Paper>
             ))}
           </Flex>
@@ -208,5 +201,5 @@ export const Header: React.FC<{ pinned: boolean }> = ({ pinned }) => {
         </Group>
       </motion.div>
     </>
-  );
-};
+  )
+}

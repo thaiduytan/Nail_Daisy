@@ -113,11 +113,28 @@
 
   @media (max-width: $mantine-breakpoint-xs) {
     width: 100%;
-    background-image: url("/assets/skilled/img_skilled_mobile.svg");
+    background-image: url("/assets/skilled/em_be.jpg");
     height: rem(708px);
     position: relative;
     padding-inline: 0 !important;
     margin-inline: 0 !important ;
+
+    /* overlay */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .title, .shinyText, .flexContent, .textCountUp {
+      z-index: 1;
+      color: var(--mantine-color-gray-3) !important;
+    }
   }
 }
 
